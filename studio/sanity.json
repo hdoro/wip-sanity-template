@@ -1,0 +1,51 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "overwritten-by-env",
+    "dataset": "overwritten-by-env"
+  },
+  "project": {
+    "name": "%SITE_NAME%"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "intl-input",
+    "cms-customizer",
+    "social-preview",
+    "@sanity/production-preview",
+    "media",
+    "@sanity/dashboard",
+    "better-slug"
+  ],
+  "env": {
+    "development": {
+      "plugins": ["@sanity/vision"]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./src/parts/deskStructure.js"
+    },
+    {
+      "name": "part:@sanity/base/new-document-structure",
+      "path": "./src/parts/newDocumentStructure.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./src/parts/resolveProductionUrl.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./src/parts/assetSource.js"
+    }
+  ]
+}

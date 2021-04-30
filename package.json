@@ -1,0 +1,44 @@
+{
+  "name": "root",
+  "description": "As the root of the repository, this package is concerned solely with tooling for better DX. Refer to /studio and /web for code itself.",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "type-check": "tsc --pretty --noEmit",
+    "lint": "eslint --fix . --ext ts --ext tsx --ext js --ext jsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.23.2",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Henrique Doro",
+    "email": "opensource@hdoro.dev",
+    "url": "https://hdoro.dev"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,4 @@
+**/node_modules/*
+**/studio/build/*
+**/web/.next/*
+**/web/dist/*

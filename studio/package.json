@@ -1,0 +1,47 @@
+{
+  "name": "studio",
+  "description": "Controls the Sanity.io studio of this site",
+  "private": true,
+  "version": "0.0.1",
+  "main": "package.json",
+  "author": {
+    "name": "Henrique Doro",
+    "email": "opensource@hdoro.dev",
+    "url": "https://hdoro.dev"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "set-intl": "node src/setIntlConfig.js",
+    "start": "npm run set-intl && sanity start",
+    "build": "npm run set-intl && sanity build",
+    "deploy": "npm run set-intl && sanity deploy"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.10.0",
+    "@sanity/components": "^2.2.6",
+    "@sanity/core": "^2.10.0",
+    "@sanity/dashboard": "^2.7.0",
+    "@sanity/default-layout": "^2.10.0",
+    "@sanity/default-login": "^2.8.0",
+    "@sanity/desk-tool": "^2.10.1",
+    "@sanity/production-preview": "^2.2.6",
+    "@sanity/vision": "^2.10.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sanity-mobile-preview": "^1.0.7",
+    "sanity-plugin-asset-source-ogimage": "^1.0.6",
+    "sanity-plugin-better-slug": "^1.0.0",
+    "sanity-plugin-intl-input": "^5.0.6",
+    "sanity-plugin-media": "^1.1.4",
+    "sanity-plugin-social-preview": "^0.1.5",
+    "sanity-plugin-vercel-deploy": "^1.1.0",
+    "speakingurl": "^14.0.1"
+  },
+  "devDependencies": {
+    "@sanity/cli": "^2.10.0"
+  }
+}

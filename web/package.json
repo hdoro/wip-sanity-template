@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "description": "Controls the front-end of this site",
+  "author": {
+    "name": "Henrique Doro",
+    "email": "opensource@hdoro.dev",
+    "url": "https://hdoro.dev"
+  },
+  "license": "Apache-2.0",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^2.8.0",
+    "@sanity/image-url": "^0.140.22",
+    "html-react-parser": "^1.2.6",
+    "next": "^10.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/node": "^15.0.1",
+    "@types/react": "^17.0.4",
+    "babel-loader": "^8.2.2",
+    "typescript": "^4.2.4",
+    "webpack": "5.36.0",
+    "webpack-cli": "^4.6.0"
+  }
+}

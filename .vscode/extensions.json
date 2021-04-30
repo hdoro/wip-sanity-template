@@ -1,0 +1,10 @@
+{
+  // List of extensions recommended to work with this repository
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "syler.sass-indented",
+    "dbaeumer.vscode-eslint",
+    "sanity-io.vscode-sanity",
+    "hdoro.sanity-snippets"
+  ]
+}

@@ -1,0 +1,87 @@
+.wrapper {
+  z-index: -1;
+}
+
+.wrapper * {
+  user-select: none;
+}
+
+.wrapperDisabled {
+  background: hsl(0, 90%, 95%);
+  border: 2px solid hsl(0, 90%, 80%);
+}
+
+.wrapperDisabled::before {
+  content: '❌ block hidden from users';
+  color: hsl(0, 70%, 30%);
+  font-weight: bold;
+  padding: 0.5em;
+  display: block;
+  background: hsl(0, 90%, 80%);
+}
+
+.header {
+  background: hsl(40, 50%, 90%);
+  font-weight: 700;
+  color: #0a1d21;
+  padding: 0.5em;
+}
+
+.header > svg {
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+
+.header > span {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 0.25em;
+  font-weight: 400;
+  color: #222;
+}
+
+.component {
+  max-height: 25vh;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.component,
+.component img,
+.component pre {
+  max-width: 100%;
+}
+
+.component > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.values {
+  padding: 0.5em;
+  margin: 0;
+  font-family: inherit;
+}
+
+.values code {
+  display: block;
+  margin: 0 0 0.25em;
+}
+
+.values code span {
+  font-weight: 500;
+  color: #383838;
+}
+
+.values strong {
+  color: #111;
+}
+
+/* Nesting of <DefaultPreview> components */
+.values .values {
+  padding: 0;
+}
+
+.values .values code {
+  margin-left: 1em;
+}
